@@ -1,0 +1,76 @@
+<% layout("/layouts/boilerplate") %>
+<div class="row">
+    <div class="col-8 offset-2">
+        <br><br>
+
+        <h3>Create a New Listings</h3>
+        <br>
+
+        <form method="POST" action="/listings" novalidate class="needs-validation" enctype="multipart/form-data"> 
+            <div class="mb-3">
+                <label for="title" class="form-label">Title</label>
+                <input name="listing[title]" placeholder="Add a catchy title" type="text" class="form-control" required>
+                <div class="valid-feedback">Title looks good!</div>
+                <div class="invalid-feedback">Title must be valid!</div>
+            </div>
+
+            <div class="mb-3">
+                <label for="description" class="form-label">Description</label> 
+                <textarea name="listing[description]" class="form-control" required></textarea>
+                <div class="valid-feedback">Description looks good!</div>
+                <div class="invalid-feedback">Please enter a short description</div>
+            </div>
+
+            <!-- <div class="mb-3">
+                <label for="filename" class="form-label">Image Filename</label>
+                <input name="listing[image][filename]" placeholder="Enter image filename" type="text" class="form-control">
+                <div class="valid-feedback">Image Filename looks good!</div>
+                <div class="invalid-feedback">Image Filename must be valid!</div>
+            </div>
+
+            <div class="mb-3">
+                <label for="url" class="form-label">Image Link</label>
+                <input name="listing[image][url]" placeholder="Enter image URL/Link" type="text" class="form-control">
+                <div class="valid-feedback">Image Link looks good!</div>
+                <div class="invalid-feedback">Please enter a valid Link for Image</div>
+            </div> -->
+
+            <div class="mb-3">
+                <label for="url" class="form-label">Upload Listing Image</label>
+                <input name="listing[image][url]" placeholder="Enter a image" type="file" class="form-control" required>
+                <div class="valid-feedback">Image looks good!</div>
+                <div class="invalid-feedback">Please enter a valid Image</div>
+            </div>
+
+            <div class="row">
+                <div class="mb-3 col-md-5">
+                    <label for="price" class="form-label">Price</label>
+                    <input name="listing[price]" placeholder="1200" type="number" class="form-control" required>
+                    <div class="valid-feedback">Price looks good!</div>
+                    <div class="invalid-feedback">Price must be valid!</div>
+                </div>
+
+                <div class="mb-3 col-md-7">
+                    <label for="country" class="form-label">Country</label>
+                    <input name="listing[country]" placeholder="India" type="text" class="form-control" required>
+                    <div class="valid-feedback">Country looks good!</div>
+                    <div class="invalid-feedback">Country must be valid!</div>
+                </div>
+            </div>
+            
+
+            <div class="mb-3">
+                <label for="location" class="form-label">Location</label>
+                <input name="listing[location]" placeholder="Jaipur" type="text" class="form-control" required>
+                <div class="valid-feedback">Location looks good!</div>
+                <div class="invalid-feedback">Location must be valid!</div>
+            </div>
+            
+            <br>
+            <button class="btn btn-dark add-btn">Add</button>
+
+        </form>
+        <br><br>
+    </div>
+
+</div>
